@@ -1,4 +1,4 @@
-package Day04;
+package Tasks;
 
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -12,16 +12,18 @@ import java.util.List;
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
-public class Task3 {
+public class Task4 {
     /*
     TASK
     Given accept type is json
-    When user sends a GET request to /allusers/alluser
+    And Path param user id is 111
+    When user sends a GET request to /allusers/getbyid/{id}
     Then the status Code should be 200
     And Content type json should be "application/json; charset=UTF-8"
-    And second name should be isa akyuz
-    And first user's experience jobs should be" Junior Developer1, Junior Developer1, Junior Developer"
-     */
+    Get user skills
+    And user's first skill should be PHP
+
+   */
 
     @BeforeClass
     public void beforeClass() {
@@ -32,24 +34,23 @@ public class Task3 {
 
     public void Test1() {
         Response response = given().contentType(ContentType.JSON)//given().accept.(ContentType.JSON)
-                .queryParam("pagesize", 50)
-                .queryParam("page", 1)
+                .pathParam("id",111)
                 .when().log().all()
-                .get("/allusers/alluser");
+                .get("/allusers/getbyid/{id}");
 
         Assert.assertEquals(response.statusCode(), 200);
         Assert.assertEquals(response.contentType(), "application/json; charset=UTF-8");
 
+        System.out.println("response.body().path(\"skills\") = " + response.body().path("skills"));
 
+//PATH methodu liste olarak String assign etmeye izin vermiyor.Ama jsonpath veriyor
         JsonPath jsonPath=response.jsonPath();
-        String secondname=jsonPath.getString("name[1]");
-        Assert.assertEquals(secondname,"isa akyuz");
+       String skills=jsonPath.getString("skills");
+       String firstSkill=jsonPath.getString("skills[0][0]");//ARAY İÇİNDE ARAY DİMENTİAL ARAY
+       Assert.assertEquals(firstSkill,"PHP");
 
-        List<String> jobs=jsonPath.getList("experience.job[0]");
-        Assert.assertEquals(jobs,"[Junior Developer1, Junior Developer1, Junior Developer]");
-
-
-
-
+       //2.yol
+        List<String> skills2=jsonPath.getList("skills[0]");
+        Assert.assertEquals(skills2.get(0), "PHP");
     }
 }

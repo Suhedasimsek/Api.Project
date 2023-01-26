@@ -1,4 +1,4 @@
-package Day03;
+package Api_Tests;
 import static io.restassured.RestAssured.*;
 
 import io.restassured.RestAssured;
