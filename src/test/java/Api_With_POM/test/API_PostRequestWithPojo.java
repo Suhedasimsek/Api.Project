@@ -1,12 +1,13 @@
 package Api_With_POM.test;
 
-import baseURLDeposu.HerokuappBaseURL;
+import Api_With_POM.baseURLDeposu.HerokuappBaseURL;
+import Api_With_POM.pojos.Booking;
+import Api_With_POM.pojos.Bookingdates;
+import Api_With_POM.pojos.Bookingid;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
-import pojos.Booking;
-import pojos.Bookingdates;
-import pojos.Bookingid;
+
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;

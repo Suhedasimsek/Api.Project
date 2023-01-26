@@ -1,12 +1,11 @@
 package Api_With_POM.test;
 
-import baseURLDeposu.JsonPlaceHolderBaseURL;
+import Api_With_POM.baseURLDeposu.JsonPlaceHolderBaseURL;
+import Api_With_POM.testDataDeposu.JsonPlaceHolderTestData;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Test;
-import testDataDeposu.JsonPlaceHolderTestData;
-
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
 
