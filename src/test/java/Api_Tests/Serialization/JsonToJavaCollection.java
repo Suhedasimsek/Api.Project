@@ -1,4 +1,4 @@
-package Api_Tests;
+package Api_Tests.Serialization;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;

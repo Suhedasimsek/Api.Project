@@ -1,4 +1,4 @@
-package Api_Tests;
+package Api_Tests.HttpMethods;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

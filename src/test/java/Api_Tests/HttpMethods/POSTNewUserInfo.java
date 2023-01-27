@@ -1,4 +1,4 @@
-package Api_Tests;
+package Api_Tests.HttpMethods;
 
 public class POSTNewUserInfo {
    private String name;

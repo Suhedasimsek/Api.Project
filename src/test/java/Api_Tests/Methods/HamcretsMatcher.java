@@ -1,4 +1,4 @@
-package Api_Tests;
+package Api_Tests.Methods;
 
 import io.restassured.http.ContentType;
 import org.testng.annotations.BeforeClass;

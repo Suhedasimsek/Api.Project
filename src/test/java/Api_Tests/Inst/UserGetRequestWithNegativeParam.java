@@ -1,4 +1,4 @@
-package Api_Tests;
+package Api_Tests.Inst;
 import static io.restassured.RestAssured.*;
 
 import io.restassured.RestAssured;

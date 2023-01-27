@@ -1,4 +1,4 @@
-package Api_Tests;
+package Api_Tests.Methods;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class getById {
+public class getByIdContains {
     /*
    TASK
         When user sends a GET request to /allusers/getbyid/111
