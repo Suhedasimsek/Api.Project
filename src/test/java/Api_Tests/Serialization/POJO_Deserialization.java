@@ -1,6 +1,5 @@
 package Api_Tests.Serialization;
 
-import Api_Tests.Inst.PetStoreUser;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;

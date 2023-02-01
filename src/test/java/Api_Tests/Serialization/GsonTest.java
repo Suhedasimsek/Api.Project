@@ -1,6 +1,5 @@
 package Api_Tests.Serialization;
 
-import Api_Tests.Inst.PetStoreUser;
 import com.google.gson.Gson;
 import org.testng.annotations.Test;
 

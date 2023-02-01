@@ -37,8 +37,9 @@ public class HamcretsMatcher {
 
                 .then().statusCode(200)
                 .and().assertThat().contentType("application/json; charset=UTF-8")
-                .and().body("id[0]",equalTo(111),"name[0]"
-                        ,equalTo("Thomas Eduson"),"job[0]",equalTo("Developer"));
+                .and().body("id[0]",equalTo(111),
+                        "name[0]",equalTo("Thomas Eduson"),
+                        "job[0]",equalTo("Developer"));
 
 
     }

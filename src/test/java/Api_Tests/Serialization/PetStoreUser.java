@@ -1,4 +1,4 @@
-package Api_Tests.Inst;
+package Api_Tests.Serialization;
 
 public class PetStoreUser {
 
